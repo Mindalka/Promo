@@ -1,0 +1,73 @@
+.form__button{
+	width:143px;
+	box-sizing:border-box;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius:25px;
+	font-size:14px;
+	line-height:20px;
+	font-family:Myriad Pro;
+	color:#ffffff;
+	background-color:#27cf31;
+	margin:auto;
+	margin-top:35px;
+	border:none;
+	position:relative;
+}
+.form__button::before{
+	.ghost-element();
+	background-image:url("../img/css_sprites.png");
+	top:15px;
+	left:30px;
+	width:30px;
+	height:30px;
+	background-position:0px -80px;
+}
+.form{
+display:flex;
+flex-direction:column;	
+border-radius:5px;
+margin-right:auto;
+}
+.form__header{
+	display:flex;
+	border-bottom:1px solid #c8d0d6; 
+	padding:0px 20px;
+	box-sizing:border-box;
+}
+.form__text{
+	width:62%;
+	border-right:1px solid #c8d0d6;
+	box-sizing:border-box;
+	font-style:regular;
+	padding-top:16px;
+	padding-bottom:12px;
+	font-size:12px;
+	line-height:20px;
+}
+.form__text--mod{
+	position:relative;
+	text-align:center;
+	color:#c8d0d6;
+	padding-left:6px;
+	border-right:none;
+	width:38%;
+}
+.form__text--mod::before{
+	.ghost-element();
+	background-image:url("../img/css_sprites.png");
+	top: 17px;
+	left: 75px;
+	width: 20px;
+	height: 20px;
+	background-position:-80px -8px;
+	background-color:transparent;
+}
+.form{
+	 width:263px;
+	 background-color:#ffffff;
+	 margin-top:41px;
+	 box-sizing:border-box;
+	 margin-left:48px;
+ }

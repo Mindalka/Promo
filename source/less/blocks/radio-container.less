@@ -1,0 +1,22 @@
+.radio-container{
+	margin:auto;
+	background-color:transparent;
+	position:relative;
+ }
+.radio-container__input {
+	width:11px;
+	height:11px;
+	padding:0px;
+	margin-right:0px;
+}
+.radio-container__input:checked::after{
+	.ghost-element();
+	top: 45%;
+	left: 12%;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background-color: dodgerblue;
+	transform: translate(-50%, -50%);
+	visibility: visible;
+}	 

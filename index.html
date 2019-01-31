@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../Promo/source/css/styles.css" >
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://atuin.ru/demo/ui-slider/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://atuin.ru/demo/ui-slider/jquery-ui.css">
+<script src="https://atuin.ru/demo/ui-slider/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+    <main class="promo-block">
+	<div class="container">
+	<section class="promo-block__content">
+	<div class="tags">
+	<ul class="tags__list">
+	<li class="tags__item"><a href="#" class="tags__link" style="text-align:top;">Technology</a></li>
+	<li class="tags__item"><a href="#" class="tags__link tags__link--mod">Startups</a></li>
+	<ul>
+	</div>
+	<h2 class="promo-block__title">The smartest clock that
+was ever made!</h2>
+	<p class="promo-block__text">The Lord of the Rings is an epic high-fantasy novel written
+	by English author J. R. R. Tolkien. The story began as a sequel to Tolkien's work.</p>
+	<a href="#" class="promo-block__button">See the features</a>
+	<section class="features">
+	 <div class="features__list features__list--first-feature">
+	 <p class="features__item features__item--radius">S98,420</p>
+	 <span class="features__item features__item--mod">Project Renevue</span>
+	 </div>
+	  <div class="features__list features__list--second-feature">
+	 <p class="features__item features__item--radius">325</p>
+	 <span class="features__item features__item--mod">New users</span>
+	 </div>
+	  <div class="features__list features__list--mod features__list--third-feature">
+	 <p class="features__item features__item--radius">3,567</p>
+	 <span class="features__item features__item--mod">Product sold</span>
+	</div>
+	</section>
+	</section>
+		<form class="form" action="mailto:адрес вашей электронной почты" enctype="text/plain">
+	<header class="form__header">
+	<p class="form__text">Filters</p>
+	<p class="form__text form__text--mod">Clear all</p>
+	</header>
+	<section class="brands">
+	<h2 class="brands__title">Brand</h2>
+	<div class="brands__container">
+	<div class="brands__name brands__name--mod brands--mod"><a class="brands__link brands__link--mod" href="#">Sony</a></div>
+	<div class="brands__name"><a class="brands__link" href="#">Apple</a></div>
+	<div class="brands__name brands__name--mod"><a class="brands__link brands__link--mod" href="#">Bose</a></div>
+	<div class="brands__name brands__name--mod"><a class="brands__link brands__link--mod"href="#">Dell</a></div>
+	<div class="brands__name brands__name--mod"><a class="brands__link brands__link--mod" href="#">LG</a></div>
+	<div class="brands__name"><a class="brands__link" href="#">Samsung</a></div>
+	<div class="brands__name"><a class="brands__link" href="#">Huawei</a></div>
+	<div class="brands__name"><a class="brands__link" href="#">HP</a></div>
+	</div>
+	</section>
+	<section class="range">
+	<h2 class="range__title">Price range:</h2>
+<div class="polzunok-container-5">
+	<label class="left-label" for="left-label">From</label>
+    <input  type="number" class="polzunok-input-5-left" id="left-label"/>
+     <label class="right-label" for="right-label">To</label>
+    <input type="number" class="polzunok-input-5-right" id="right-label"/>
+    <div class="polzunok-5"></div>
+</div>
+</section>
+<button class="form__button">Find</button>
+</form>
+	</div>
+	</div>
+	<div class="slider-controls">
+	<div class="slider-controls__left-arrow"></div>
+	<div class="slider-controls__button">
+	<div class="radio-container">
+	<input class="radio-container__input" type="radio" checked>
+	<input class="radio-container__input" type="radio">
+	<input class="radio-container__input" type="radio">
+	<input class="radio-container__input" type="radio">
+	</div>
+	</div>
+	<div class="slider-controls__right-arrow"></div>
+	</div>
+	</main>
+<script>
+$(".polzunok-5").slider({
+    min: 0,
+    max: 300,
+    values: [45, 250],
+    range: true,
+    animate: "fast",
+    slide : function(event, ui) {    
+        $(".polzunok-input-5-left").val(ui.values[ 0 ]);   
+        $(".polzunok-input-5-right").val(ui.values[ 1 ]);  
+    }    
+});
+$(".polzunok-input-5-left").val($(".polzunok-5").slider("values", 0));
+$(".polzunok-input-5-right").val($(".polzunok-5").slider("values", 1));
+$(document).focusout(function() {
+    var input_left = $(".polzunok-input-5-left").val().replace(/[^0-9]/g, ''),    
+    opt_left = $(".polzunok-5").slider("option", "min"),
+    where_right = $(".polzunok-5").slider("values", 1),
+    input_right = $(".polzunok-input-5-right").val().replace(/[^0-9]/g, ''),    
+    opt_right = $(".polzunok-5").slider("option", "max"),
+    where_left = $(".polzunok-5").slider("values", 0); 
+    if (input_left > where_right) { 
+        input_left = where_right; 
+    }
+    if (input_left < opt_left) {
+        input_left = opt_left; 
+    }
+    if (input_left == "") {
+    input_left = 0;    
+    }        
+    if (input_right < where_left) { 
+        input_right = where_left; 
+    }
+    if (input_right > opt_right) {
+        input_right = opt_right; 
+    }
+    if (input_right == "") {
+    input_right = 0;    
+    }    
+    $(".polzunok-input-5-left").val(input_left); 
+    $(".polzunok-input-5-right").val(input_right); 
+    $(".polzunok-5").slider( "values", [ input_left, input_right ] );
+});
+</script>
+</body>
+</html>
