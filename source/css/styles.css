@@ -101,13 +101,13 @@ body {
 }
 .form__header {
   display: flex;
-  border-bottom: 1px solid #c8d0d6;
+  border-bottom: 1px solid #eef2f5;
   padding: 0px 20px;
   box-sizing: border-box;
 }
 .form__text {
   width: 62%;
-  border-right: 1px solid #c8d0d6;
+  border-right: 1px solid #eef2f5;
   box-sizing: border-box;
   font-style: regular;
   padding-top: 16px;
