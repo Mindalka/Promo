@@ -32,12 +32,6 @@ body {
   padding: 0px 20px;
   border-bottom: 1px solid #eef2f5;
 }
-.brands__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-bottom: 15px;
-}
 .brands__title {
   font-size: 12px;
   line-height: 24px;
@@ -45,6 +39,12 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   box-sizing: border-box;
+}
+.brands__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 15px;
 }
 .brands__name {
   position: relative;
@@ -60,12 +60,6 @@ body {
   line-height: 20px;
   text-align: left;
 }
-.brands__link {
-  color: #7a7c81;
-}
-.brands__link--mod {
-  color: #1c92d3;
-}
 .brands__name--mod {
   border: 1px solid #eef2f5;
 }
@@ -80,6 +74,12 @@ body {
   width: 20px;
   height: 20px;
 }
+.brands__link {
+  color: #7a7c81;
+}
+.brands__link--mod {
+  color: #1c92d3;
+}
 .container {
   display: flex;
   margin: 0 auto;
@@ -88,39 +88,16 @@ body {
   box-sizing: border-box;
   margin-bottom: 50px;
 }
-.form__button {
-  width: 143px;
-  box-sizing: border-box;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 25px;
-  font-size: 14px;
-  line-height: 20px;
-  font-family: Myriad Pro;
-  color: #ffffff;
-  background-color: #27cf31;
-  margin: auto;
-  margin-top: 35px;
-  border: none;
-  position: relative;
-}
-.form__button::before {
-  position: absolute;
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("../img/css_sprites.png");
-  top: 15px;
-  left: 30px;
-  width: 30px;
-  height: 30px;
-  background-position: 0px -80px;
-}
 .form {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   margin-right: auto;
+  width: 263px;
+  background-color: #ffffff;
+  margin-top: 41px;
+  box-sizing: border-box;
+  margin-left: 48px;
 }
 .form__header {
   display: flex;
@@ -158,12 +135,33 @@ body {
   background-position: -80px -8px;
   background-color: transparent;
 }
-.form {
-  width: 263px;
-  background-color: #ffffff;
-  margin-top: 41px;
+.form__button {
+  width: 143px;
   box-sizing: border-box;
-  margin-left: 48px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Myriad Pro;
+  color: #ffffff;
+  background-color: #27cf31;
+  margin: auto;
+  margin-top: 35px;
+  border: none;
+  position: relative;
+}
+.form__button::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("../img/css_sprites.png");
+  top: 15px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  background-position: 0px -80px;
 }
 .features {
   display: flex;
@@ -178,26 +176,6 @@ body {
   box-sizing: border-box;
   position: relative;
 }
-.features__item {
-  font-size: 20px;
-  line-height: 26.7px;
-  box-sizing: border-box;
-  padding-left: 78px;
-  background-color: #ffffff;
-  padding-top: 27px;
-  color: #32394d;
-}
-.features__item--radius {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-}
-.features__list--mod {
-  margin-right: 0px;
-}
-.features__item--mod {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
 .features__list::before {
   position: absolute;
   content: "";
@@ -211,6 +189,9 @@ body {
   background-color: green;
   border-radius: 50%;
 }
+.features__list--mod {
+  margin-right: 0px;
+}
 .features__list--second-feature::before {
   background-position: -36px 1px;
   background-color: #1d97da;
@@ -219,12 +200,27 @@ body {
   background-position: 1px 0px;
   background-color: violet;
 }
+.features__item {
+  font-size: 20px;
+  line-height: 26.7px;
+  box-sizing: border-box;
+  padding-left: 78px;
+  background-color: #ffffff;
+  padding-top: 27px;
+  color: #32394d;
+}
 .features__item--mod {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   color: #6d7487;
   font-size: 11px;
   line-height: 17.8px;
   padding-top: 0px;
   padding-bottom: 17px;
+}
+.features__item--radius {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 .promo-block {
   max-width: 1320px;
